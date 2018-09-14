@@ -9,7 +9,7 @@ public class SaveMessage {
       EntityManager em = emf.createEntityManager();
       EntityTransaction tx = em.getTransaction();
       tx.begin();
-      Message message = new Message(2, "Hello World");
+      Message message = new Message(20, "Hello World");
       em.persist(message);
       tx.commit();
       em.close();

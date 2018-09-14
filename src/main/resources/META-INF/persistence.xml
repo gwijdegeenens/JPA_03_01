@@ -5,11 +5,18 @@
    version="2.1">
    <persistence-unit name="course" transaction-type="RESOURCE_LOCAL">
       <properties>
-         <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+         <!--property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
          <property name="javax.persistence.jdbc.url" value="jdbc:mysql://noelvaes.eu:3306/StudentDB" />
          <property name="javax.persistence.jdbc.user" value="student" />
          <property name="javax.persistence.jdbc.password" value="student123" />
-         <property name="javax.persistence.schema-generation.database.action" value="create" />
+         <property name="javax.persistence.schema-generation.database.action" value="none" /-->
+
+         <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+         <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:mydatabase" />
+         <property name="javax.persistence.jdbc.user" value="sa" />
+         <property name="javax.persistence.jdbc.password" value="" />
+         <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+
          <!-- Hibernate specific -->
          <property name="hibernate.show_sql" value="false"/>
          <property name="hibernate.format_sql" value="false"/>
